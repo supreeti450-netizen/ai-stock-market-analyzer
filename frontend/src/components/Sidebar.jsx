@@ -57,6 +57,15 @@ function Sidebar() {
             textDecoration: "none",
           }}
         >
+          <Link
+  to="/charts"
+  style={{
+    color: "white",
+    textDecoration: "none",
+  }}
+>
+  📈 Charts
+</Link>
           🤖 AI Assistant
         </Link>
 

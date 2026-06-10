@@ -22,7 +22,10 @@ function Home() {
       >
         📈 AI Stock Market Analyzer
       </h1>
-
+      <div>
+  <h3>📈 Charts</h3>
+  <p>View stock performance charts.</p>
+</div>
       <p
         style={{
           fontSize: "22px",

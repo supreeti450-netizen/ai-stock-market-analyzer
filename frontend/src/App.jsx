@@ -9,6 +9,7 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Watchlist from "./pages/Watchlist";
 import AIChat from "./pages/AIChat";
+import Charts from "./pages/Charts";
 
 function App() {
   return (
@@ -39,8 +40,9 @@ function App() {
           path="/ai"
           element={<AIChat />}
         />
-
+      <Route path="/charts" element={<Charts />} />
       </Routes>
+      
     </BrowserRouter>
   );
 }
