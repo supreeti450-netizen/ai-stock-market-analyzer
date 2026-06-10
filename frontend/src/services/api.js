@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: "https://ai-stock-market-analyzer.onrender.com",
 });
 
 API.interceptors.request.use((config) => {
