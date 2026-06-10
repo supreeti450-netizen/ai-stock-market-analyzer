@@ -1,9 +1,19 @@
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
+
 function Charts() {
-  const stocks = [
-    { symbol: "AAPL", price: 291 },
-    { symbol: "MSFT", price: 402 },
-    { symbol: "NVDA", price: 201 },
-    { symbol: "TSLA", price: 391 },
+  const data = [
+    { day: "Mon", price: 180 },
+    { day: "Tue", price: 190 },
+    { day: "Wed", price: 185 },
+    { day: "Thu", price: 210 },
+    { day: "Fri", price: 201 },
   ];
 
   return (
@@ -16,30 +26,21 @@ function Charts() {
     >
       <h1>📈 Stock Charts</h1>
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns:
-            "repeat(auto-fit,minmax(250px,1fr))",
-          gap: "20px",
-        }}
-      >
-        {stocks.map((stock, index) => (
-          <div key={index} className="card">
-            <h2>{stock.symbol}</h2>
-            <h3>${stock.price}</h3>
+      <div className="card">
+        <h2>NVDA</h2>
 
-            <div
-              style={{
-                height: "120px",
-                background:
-                  "linear-gradient(45deg,#2563eb,#60a5fa)",
-                borderRadius: "10px",
-                marginTop: "10px",
-              }}
+        <ResponsiveContainer width="100%" height={300}>
+          <LineChart data={data}>
+            <XAxis dataKey="day" />
+            <YAxis />
+            <Tooltip />
+            <Line
+              type="monotone"
+              dataKey="price"
+              stroke="#2563eb"
             />
-          </div>
-        ))}
+          </LineChart>
+        </ResponsiveContainer>
       </div>
     </div>
   );
