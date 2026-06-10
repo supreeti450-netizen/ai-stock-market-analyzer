@@ -27,9 +27,27 @@ A full-stack stock market analysis platform built using React, Node.js, Express 
 ### Database
 - PostgreSQL
 
-## Screenshots
+# Screenshots
 
-Coming Soon
+## Home
+
+![Home](screenshots/home.png)
+
+## Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+## Watchlist
+
+![Watchlist](screenshots/watchlist.png)
+
+## AI Assistant
+
+![AI Assistant](screenshots/ai-assistant.png)
+
+## Charts
+
+![Charts](screenshots/charts.png)
 
 ## Future Enhancements
 
