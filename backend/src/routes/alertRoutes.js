@@ -2,30 +2,23 @@ const express = require("express");
 const router = express.Router();
 
 const authMiddleware =
-    require("../middleware/authMiddleware");
+  require("../middleware/authMiddleware");
 
 const {
-    createAlert,
-    getAlerts,
-    checkAlerts
+  createAlert,
+  getAlerts,
 } = require("../controllers/alertController");
 
 router.post(
-    "/",
-    authMiddleware,
-    createAlert
+  "/",
+  authMiddleware,
+  createAlert
 );
 
 router.get(
-    "/",
-    authMiddleware,
-    getAlerts
-);
-
-router.get(
-    "/check",
-    authMiddleware,
-    checkAlerts
+  "/",
+  authMiddleware,
+  getAlerts
 );
 
 module.exports = router;

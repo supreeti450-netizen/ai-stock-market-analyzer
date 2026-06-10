@@ -13,6 +13,10 @@ require("./routes/portfolioRoutes");
 const chartRoutes =
 require("./routes/chartRoutes");
 const app = express();
+const newsRoutes =
+require("./routes/newsRoutes");
+const aiRoutes =
+  require("./routes/aiRoutes");
 app.use(cors());
 app.use(express.json());
 app.use("/stock", stockRoutes);
@@ -21,6 +25,9 @@ app.use(
     portfolioRoutes
 );
 app.use("/chart", chartRoutes);
+app.use("/news", newsRoutes);
+app.use("/alerts", alertRoutes);
+app.use("/ai", aiRoutes);
 app.get("/", async (req, res) => {
   try {
     const result = await pool.query("SELECT NOW()");

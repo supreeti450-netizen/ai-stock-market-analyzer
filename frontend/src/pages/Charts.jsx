@@ -1,0 +1,1 @@
+<Route path="/charts" element={<Charts />} />
