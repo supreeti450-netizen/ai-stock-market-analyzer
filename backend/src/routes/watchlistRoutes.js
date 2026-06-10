@@ -13,25 +13,21 @@ const {
 
 router.post(
     "/",
-    authMiddleware,
     addToWatchlist
 );
 
 router.get(
     "/",
-    authMiddleware,
     getWatchlist
 );
 
 router.delete(
     "/:symbol",
-    authMiddleware,
     removeFromWatchlist
 );
 
 router.get(
     "/live",
-    authMiddleware,
     getWatchlistLive
 );
 

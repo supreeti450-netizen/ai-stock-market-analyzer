@@ -31,7 +31,7 @@ function Dashboard() {
   const loadData = async () => {
     try {
       const token =
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJzdXByZWV0aUBleGFtcGxlLmNvbSIsImlhdCI6MTc4MDk4NTA5OSwiZXhwIjoxNzgxMDcxNDk5fQ.O_Wc8zqT0Lu69iuqqSWprsAyQMl6xugb3upysTqEDio";
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJzdXByZWV0aUBleGFtcGxlLmNvbSIsImlhdCI6MTc4MTA3NjEyNiwiZXhwIjoxNzgxMTYyNTI2fQ.NyQLBRzrRRNIVnr1dR12lfp6df2u3D9ig6Iv5sGhdSY";
       const valueRes = await API.get(
         "/portfolio/value",
         {

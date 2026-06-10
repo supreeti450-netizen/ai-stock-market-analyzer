@@ -13,7 +13,7 @@ const addToWatchlist = async (req, res) => {
             VALUES ($1, $2)
             RETURNING *
             `,
-            [req.user.id, stock_symbol]
+            [1, stock_symbol]
         );
 
         res.status(201).json(result.rows[0]);
@@ -37,7 +37,7 @@ const getWatchlist = async (req, res) => {
             WHERE user_id = $1
             ORDER BY created_at DESC
             `,
-            [req.user.id]
+            [1]
         );
 
         res.json(result.rows);
@@ -62,7 +62,7 @@ const removeFromWatchlist = async (req, res) => {
             WHERE user_id = $1
             AND stock_symbol = $2
             `,
-            [req.user.id, symbol]
+            [1, symbol]
         );
 
         res.json({
@@ -87,7 +87,7 @@ const getWatchlistLive = async (req, res) => {
             FROM watchlists
             WHERE user_id = $1
             `,
-            [req.user.id]
+            [1]
         );
 
         const result = [];

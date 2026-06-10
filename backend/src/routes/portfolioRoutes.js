@@ -31,19 +31,16 @@ router.get(
 
 router.get(
     "/summary",
-    authMiddleware,
     getPortfolioSummary
 );
 
 router.get(
     "/value",
-    authMiddleware,
     getPortfolioValue
 );
 
 router.get(
     "/allocation",
-    authMiddleware,
     getPortfolioAllocation
 );
 
@@ -72,7 +69,6 @@ router.get(
 );
 router.get(
     "/advisor",
-    authMiddleware,
     getPortfolioAdvisor
 );
 

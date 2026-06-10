@@ -33,7 +33,7 @@ const addPortfolio = async (req, res) => {
             RETURNING *
             `,
             [
-                req.user.id,
+                1,
                 stock_symbol,
                 quantity,
                 buy_price
@@ -61,7 +61,7 @@ const getPortfolio = async (req, res) => {
             WHERE user_id = $1
             ORDER BY created_at DESC
             `,
-            [req.user.id]
+            [1]
         );
 
         res.json(result.rows);
@@ -88,7 +88,7 @@ const getPortfolioSummary = async (req, res) => {
             WHERE user_id = $1
             GROUP BY stock_symbol
             `,
-            [req.user.id]
+            [1]
         );
 
         res.json(result.rows);
@@ -111,7 +111,7 @@ const getPortfolioValue = async (req, res) => {
             FROM portfolios
             WHERE user_id = $1
             `,
-            [req.user.id]
+            [1]
         );
 
         let totalInvestment = 0;
@@ -180,7 +180,7 @@ const getPortfolioAllocation = async (req, res) => {
             FROM portfolios
             WHERE user_id = $1
             `,
-            [req.user.id]
+            [1]
         );
 
         let totalValue = 0;
@@ -233,7 +233,7 @@ const getPortfolioInsights = async (req, res) => {
             FROM portfolios
             WHERE user_id = $1
             `,
-            [req.user.id]
+            [1]
         );
 
         let bestPerformer = null;
@@ -297,7 +297,7 @@ const getPortfolioHealth = async (req, res) => {
             FROM portfolios
             WHERE user_id = $1
             `,
-            [req.user.id]
+            [1]
         );
 
         const holdingsCount = portfolio.rows.length;
@@ -344,7 +344,7 @@ const getSectorAllocation = async (req, res) => {
             FROM portfolios
             WHERE user_id = $1
             `,
-            [req.user.id]
+            [1]
         );
 
         const sectors = {};
@@ -397,7 +397,7 @@ const getDiversificationScore = async (req, res) => {
             FROM portfolios
             WHERE user_id = $1
             `,
-            [req.user.id]
+            [1]
         );
 
         const sectors = {};
@@ -461,7 +461,7 @@ const getPortfolioAdvisor = async (req, res) => {
             FROM portfolios
             WHERE user_id = $1
             `,
-            [req.user.id]
+            [1]
         );
 
         const totalHoldings =
